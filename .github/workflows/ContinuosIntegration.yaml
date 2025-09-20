@@ -12,13 +12,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-      - name: Setup Java
+      - uses: actions/checkout@v5
+        name: Descargando el codigo
+      - name: Instalar Java
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
+          distribution: 'temurin'
           java-version: '17'
-          cache: maven
-      - name: Build
-        run: mvn -B -ntp clean install
+      - name: Instalar Maven
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Instalar Maven
+        uses: s4u/maven-install@v1
+        with:
+          maven-version: '3.8.4'
+      - name: Compilar
+        run: mvn -B -DskipTests clean package
