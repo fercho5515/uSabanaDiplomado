@@ -24,7 +24,7 @@ public class UserController {
 
 	@GetMapping("/listar")
     public ResponseEntity<List<UserEntity>> listUsers() {
-    	return ResponseEntity.ok(iUser.listUsers());
+		return ResponseEntity.ok(null);
     }
 	
 	@PostMapping
