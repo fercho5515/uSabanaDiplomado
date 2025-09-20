@@ -16,8 +16,8 @@ public class UserServiceImpl implements IUserService{
 	
 	@Override
 	public List<UserEntity> listUsers() {
-		List<UserEntity> users = iUserRepository.findAll();
-		return users;
+		//List<UserEntity> users = iUserRepository.findAll();
+		return iUserRepository.findAll();
 	}
 	
 	@Override
