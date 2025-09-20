@@ -1,7 +1,7 @@
 CREATE SCHEMA IF NOT EXISTS usabana AUTHORIZATION fernando;
 
 CREATE TABLE IF NOT EXISTS usabana.usuarios (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     nombres VARCHAR(100) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
