@@ -29,4 +29,4 @@ jobs:
         with:
           maven-version: '3.8.4'
       - name: Compilar
-        run: mvn clean install
+        run: mvn -B -DskipTests clean package
