@@ -22,7 +22,7 @@ jobs:
           cache: maven
       - name: Compilar
         run: mvn -B -ntp clean install
-          - uses: mr-smithers-excellent/docker-build-push@v6
+      - uses: mr-smithers-excellent/docker-build-push@v6
         name: Build & push Docker image
         with:
           image: fercho5515/usabana-api
