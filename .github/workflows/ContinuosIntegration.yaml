@@ -19,14 +19,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Instalar Maven
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-      - name: Instalar Maven
-        uses: s4u/maven-install@v1
-        with:
-          maven-version: '3.8.4'
+          cache: maven
       - name: Compilar
         run: mvn -B -ntp clean install
