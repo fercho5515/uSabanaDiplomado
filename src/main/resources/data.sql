@@ -1,0 +1,1 @@
+INSERT INTO usuarios (nombres, apellidos, fecha_nacimiento, numero_documento) VALUES ('Juan', 'Pérez', '1990-05-12', '123456789');
